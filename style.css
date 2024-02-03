@@ -1,0 +1,499 @@
+@font-face {
+    font-family: nue;
+    src: url(./64d3dd9edfb41666c35b15bf_NeueHaasDisplay-Mediu.ttf);
+    font-weight: 900;
+}
+@font-face {
+    font-family: Nue;
+    src: url(./64d3dd9edfb41666c35b15c0_NeueHaasDisplay-Roman.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Nue;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 500vh;
+    width: 98.9vw;
+    position: relative;
+    overflow: hidden;
+}
+#page1{
+    
+    height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+    /* position:static; */
+}
+#nav{
+    height: 136px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px;
+}
+#nav h1 span{
+    font-weight: 100;
+    color: #FE330A;
+    mix-blend-mode: difference;
+    
+}
+#nav h1{
+    line-height: 34px;
+    font-size: 38px;
+    font-weight: 900;
+    position: relative;
+    z-index: 3;
+    
+}
+#nav2 button{
+margin: 0 2px;
+padding: 12px 25px;
+border-radius: 50px;
+background-color: transparent;
+border: 1px solid rgb(197, 180, 180);
+font-size: 16px;
+position: relative;
+transition: all ease-in 200ms;
+z-index: 6;
+overflow: hidden;
+}
+
+#nav h1::after{
+    content: "";
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    background-color: #FE330A;
+    border-radius: 50%;
+    right: 3%;
+    bottom: 1%;
+    z-index: -1;
+    mix-blend-mode: difference;
+}
+
+button::after{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,0);
+    bottom: -120%;
+    background-color: #000;
+    transition: all ease-in-out 200ms;
+    z-index: -1;
+    
+}
+
+button:hover::after{
+    bottom: -0.25px;
+    border-radius: 0;
+    height: 102%;
+    width: 102%;
+    
+
+}
+button:hover{
+    color: white;
+    
+}
+#txt1{
+    text-align: right;
+    margin: 50px;
+    font-size: 160px;
+    margin-top: 170px;
+    font-weight: 900;
+    line-height: 132px;
+    position: absolute;
+    right: 0;
+    /* background: #000; */
+}
+#txt2{
+    width: 30%;
+    position: absolute;
+    top: 500px;
+    z-index: 9;
+    left: 0;
+    margin: 50px;
+    /* background-color: red; */
+    font-size: 30px;
+}
+hr{
+    width: 95%;
+
+    position: absolute;
+    bottom: 5%;
+    z-index: 9;
+    left: 2.5%;
+}
+#page2{
+    height: 200vh;
+    background-color: #EFEAE3;
+    white-space: nowrap;
+    overflow-x:hidden;
+    
+    /* background-color: red; */
+    /* position: relative; */
+}
+#page2 h1{
+    display: inline-block;
+    position: relative;
+    font-size: 140px;
+    /* background-color: #fff; */
+    margin: 60px;
+    cursor: url(cursor.png), pointer;
+    transition: all ease-in-out 1s;
+    
+
+}
+#ball{
+    height: 60px;
+    width: 60px;
+    background-color:#FE3B0D;
+    border-radius: 50%;
+}
+
+
+@keyframes anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100%));
+    }
+    
+}
+#scroll{
+    animation-name: anime;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: flex;
+    /* white-space: nowrap; */
+    /* background-color: red;  */
+    width:211.5%;
+
+
+}
+#one{
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+}
+#page2::-webkit-scrollbar{
+    display: none;
+    
+}
+
+#page3 video{
+    border-radius: 20px;
+    width: 80vw;
+    position: absolute;
+    left: 10vw;
+}
+#page3{
+    width: 100%;
+    height: 100vh;
+    background-color:#EFEAE3;
+}
+#feat{
+    margin: 36px;
+    font-weight: 40;
+}
+.list{
+    width: 100%;
+    height: 120px;
+    /* background-color: red; */
+    border-bottom: 1px solid #beb1b1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px;
+    transition: all ease-in.5s;
+    
+    
+}
+.list h2{
+    font-size: 50px;
+}
+.list h3{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: right;
+}
+.list h4{
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 200;
+    text-align: right;
+    color: #918a8a;
+    
+}
+#float1{
+    height: 65%;
+    width: 25%;
+    background-color: red;
+    position: fixed;
+    z-index: 4;
+    top: 20%;
+    left: 55%;
+    border-radius: 20px;
+    display: none;
+}
+
+.list:hover{
+    background-color: #FF9831;
+}
+
+#l1:hover ~ #float1{
+    background-color:  transparent;
+    display: initial;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16f4_Copy%20of%20Nike_Soho_50th_SU22_FL1_6176.webp);
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+#l2:hover ~ #float1{
+    background-color: transparent;
+    display: initial;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1733_Nike_HOI_50th_SU22_FL1_5388.webp);
+    background-size: cover;
+    background-position: center;
+}
+#l3:hover ~ #float1{
+    background-color: transparent;
+    display: initial;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b163b_Copy-of-IMG_1180.webp);
+    background-size: cover;
+    background-position: center;
+}
+#l4:hover ~ #float1{
+    background-color:  transparent;
+    display: initial;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16c5_Copy%20of%20Nike_Soho_AMD21_0781_LORES.webp);
+    background-size: cover;
+    background-position: center;
+}
+#l5:hover ~ #float1{
+    background-color:  transparent;
+    display: initial;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16f4_Copy%20of%20Nike_Soho_50th_SU22_FL1_6176.webp);
+    background-size: cover;
+    background-position: center;
+}
+#l6:hover ~ #float1{
+    background-color: transparent;
+    display: initial;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1733_Nike_HOI_50th_SU22_FL1_5388.webp);
+    background-size: cover;
+    background-position: center;
+}
+#l7:hover ~ #float1{
+    background-color: transparent;
+    display: initial;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16c5_Copy%20of%20Nike_Soho_AMD21_0781_LORES.webp);
+    background-size: cover;
+    background-position: center;
+}
+#page4{
+    height: 100vh;
+    /* width: 100vw; */
+    background-color: transparent;
+    
+}
+#page5{
+    height: 100vh;
+    width: 100vw;
+    background-color:black;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    /* position: relative; */
+    
+    
+}
+#page5 img{
+    height: 100vh;
+}
+
+#page5 img{
+    height: 300px;
+    position: absolute;
+    bottom: 10%;
+    left: 5vw;
+    padding: 30px;
+    border-bottom: 1px solid #918a8a;
+}
+#page5 h1{
+    position: absolute;
+    left: 8%;
+    top: 20%;
+    font-size: 40px;
+    /* width: 20%; */
+    color: white;
+}
+#page5 h2{
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    /* width: 20%; */
+    color: white;
+}
+#page5 #email{
+    position: absolute;
+    width: 330px;
+    left: 70%;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #fff; */
+    border-bottom: 1px solid#918a8a;
+    padding: 10px;
+    color: #beb1b1;
+}
+#page5 #email h3{
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+#box1{
+    
+    height: 1000px;
+    width: 1200px;
+    position: absolute;
+    bottom: 300px;
+    left:-300px;
+    background-color: #FE330A;
+    border-radius: 50%;
+    animation-name: movedown;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(100px);
+    animation-timing-function: ease-in-out;
+    z-index: -1;
+
+}
+#box2{
+    left: 50%;
+    height: 600px;
+    width: 1200px;
+    bottom: 300px;
+    left:600px;
+    position: absolute;
+    background-color: #FE330A;
+    border-radius: 50%;
+    animation-name:moveside ;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(100px);
+    animation-timing-function: ease-in-out;
+    z-index: -1;
+
+}
+
+#box3{
+    /* left: 50%; */
+    height: 600px;
+    width: 900px;
+    bottom: -300px;
+    left:1000px;
+    position: absolute;
+    background-color: #FE330A;
+    border-radius: 50%;
+    animation-name:moveside2 ;
+    animation-duration: 1.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(50px);
+    animation-timing-function: ease-in-out;
+    z-index: 0;
+
+}
+@keyframes movedown {
+    from{
+        transform: translate(0,8%);
+    }
+    to{transform: translate(0,-4%);}
+    
+}
+@keyframes moveside {
+    from{
+        transform: translate(8%,-9%);
+    }
+    to{transform: translate(-8%,0);}
+    
+}
+@keyframes moveside2 {
+    from{
+        transform: translate(-5%,-12%);
+    }
+    to{transform: translate(5%,4%);}
+    
+}
+#slidepage{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+    z-index: 12;
+    animation-name: slideup;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    
+}
+#slidepage::after{
+    content: "";
+    position: absolute;
+    font-size: 70px;
+    font-weight: 900;
+    color:#fe650d;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation-name: texts;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    
+
+}
+@keyframes texts {
+    0%{
+        content: "";
+    }
+    25%{
+        content: "Environments";
+    }
+    50%{
+        content: "Experiences";
+    }
+    75%{
+        content: "Content";
+    }
+    100%{
+        content: "";
+    }
+    
+}
+@keyframes slideup {
+    0%{
+        height: 100vh;
+    }
+    100%{
+        height: 0;
+    }
+    
+}
